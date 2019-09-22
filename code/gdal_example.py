@@ -8,9 +8,17 @@ file_name = "data/S5P_NRTI_L2__CO_____20190921T104303_20190921T104803_10045_01_0
 # Specify the layer name to read
 layer_name = "//PRODUCT/carbonmonoxide_total_column"
 
-# Open netcdf file.nc with gdal
-ds = gdal.Open("HDF5:{}:{}".format(file_name, layer_name))
+def main():
+    # Open netcdf file.nc with gdal
+    ds = gdal.Open("HDF5:{}:{}".format(file_name, layer_name))
 
-# read data using raster size
-data = ds.ReadAsArray()
-print(data)
+    # read data using raster size
+    data = ds.ReadAsArray()
+
+    print('no ground pixels', len(data))
+    print('no scan lines', len(data[0]))
+    print(data)
+
+
+if __name__ == '__main__':
+    main()
