@@ -1,2 +1,4 @@
 sentinelsat
+numpy
 pandas
+gdal
