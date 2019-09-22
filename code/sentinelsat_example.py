@@ -18,7 +18,7 @@ products_df = api.to_dataframe(products)
 
 # inspect data
 products_df.head()  # view top of df
-products.columns  # show column names
+products_df.columns  # show column names
 
 # filter only one product of CO
 where = products_df.producttypedescription == 'Carbon Monoxide'
