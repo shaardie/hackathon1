@@ -27,7 +27,7 @@ def main():
         for j in range(shape[1]):
             feature_list.append(
                 Feature(
-                    geometrie=Point(
+                    geometry=Point(
                         (float(longitude[i, j]), float(latitude[i, j]))),
                     properties={"CO": float(data[i, j])}
                 )
